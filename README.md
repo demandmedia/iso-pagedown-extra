@@ -12,14 +12,12 @@ the second method.
 
 ## Usage
 
-First, make sure you have the most recent version of Pagedown (as of Feb 3, 2013),
-as it adds more powerful hooks that this implementation relies on.
-
-In order to use the extensions, you'll need to include
-`Markdown.Extra.js` after the Pagedown sources. Check out the
-demo for a working example.
+### Browser
 
 ```javascript
+// include iso-pagedown-extra module
+// ...
+
 // create a pagedown converter - regular and sanitized versions are both supported
 var converter = new Markdown.Converter();
 // tell the converter to use Markdown Extra
@@ -28,16 +26,20 @@ Markdown.Extra.init(converter);
 var html = converter.makeHtml("| A | B |\n| :-: | :-: |\n| 1 | 2 |");
 ```
 
-To use this in Node.js with Pagedown:
+### Node.js
 
 ```javascript
-var pagedown = require("pagedown");
+// include iso-pagedown-extra module
+var pagedown = require("iso-pagedown-extra");
+// create a pagedown converter - regular and sanitized versions are both supported
 var converter = new pagedown.Converter();
-var pagedownExtra = require("pagedown-extra");
-pagedownExtra.init(converter);
+// tell the converter to use Markdown Extra
+pagedown.Extra.init(converter);
+// convert some markdown
+var html = converter.makeHtml("| A | B |\n| :-: | :-: |\n| 1 | 2 |");
 ```
 
-If you're using multiple converters on the same page, you can just call
+### If you're using multiple converters on the same page, you can just call
 `Markdown.Extra.init` once for each converter and you're all set.
 
 If you want, you can choose to use only a subset of the extensions currently supported:

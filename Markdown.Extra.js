@@ -1,4 +1,6 @@
 (function () {
+  var Markdown = require('postdown');
+
   // A quick way to make sure we're only keeping span-level tags when we need to.
   // This isn't supposed to be foolproof. It's just a quick way to make sure we
   // keep all span-level tags returned by a pagedown converter. It should allow
@@ -869,6 +871,7 @@
       return previousTag ? wholeMatch : " <br>\n";
     });
   };
-  
+
+  module.exports = Markdown;
 })();
 
