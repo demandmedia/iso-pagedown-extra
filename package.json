@@ -1,7 +1,10 @@
 {
   "name": "iso-pagedown-extra",
-  "version": "0.1.0",
-  
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sjungwirth/iso-pagedown-extra.git"
+  },
   "main": "node-pagedown-extra.js",
   "dependencies": {
     "pagedown": "^1.1.0"
