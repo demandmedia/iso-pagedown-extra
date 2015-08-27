@@ -7,7 +7,7 @@
   },
   "main": "node-pagedown-extra.js",
   "dependencies": {
-    "pagedown": "^1.1.0"
+    "pagedown": "sjungwirth/pagedown"
   },
   "devDependencies": {
     "karma": "~0.10.8"
